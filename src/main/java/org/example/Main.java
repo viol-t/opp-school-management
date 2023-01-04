@@ -28,7 +28,7 @@ public class Main {
         LibraryServiceImpl libraryServiceImpl = new LibraryServiceImpl();
 
         libraryServiceImpl.addToBookList(Mathematics,3);
-//        libraryServiceImpl.addToBookList(English,3);
+        libraryServiceImpl.addToBookList(English,3);
 //        libraryServiceImpl.addToBookList(Biology,4);
 //        libraryServiceImpl.addToBookList(Chemistry,4);
 
@@ -37,23 +37,24 @@ public class Main {
        libraryServiceImpl.addlibraryUsers(Matthew,Type.SENIOR_STUDENT);
         libraryServiceImpl.addlibraryUsers(Efe,Type.SENIOR_STUDENT);
         libraryServiceImpl.addlibraryUsers(Laura,Type.JUNIOR_STUDENT);
+        libraryServiceImpl.addlibraryUsers(Mary,Type.JUNIOR_STUDENT);
 
         libraryServiceImpl.addToQueueList(Laura,Mathematics);
         libraryServiceImpl.addToQueueList(Efe,Mathematics);
         libraryServiceImpl.addToQueueList(Okeke,Mathematics);
         libraryServiceImpl.addToQueueList(Matthew,Mathematics);
 
-//        System.out.println(libraryServiceImpl.getQueueList());
-//
-        System.out.println(libraryServiceImpl.giveBooksUsingQueue(Mathematics));
-        System.out.println(libraryServiceImpl.giveBooksUsingQueue(Mathematics));
-        System.out.println(libraryServiceImpl.giveBooksUsingQueue(Mathematics));
-        System.out.println(libraryServiceImpl.giveBooksUsingQueue(Mathematics));
+        //System.out.println(libraryServiceImpl.getQueueList());
 
-//        libraryServiceImpl.addToPriorityList(Efe,Mathematics);
+        System.out.println(libraryServiceImpl.giveBooksUsingQueue(Mathematics));
+        System.out.println(libraryServiceImpl.giveBooksUsingQueue(Mathematics));
+        System.out.println(libraryServiceImpl.giveBooksUsingQueue(Mathematics));
+        System.out.println(libraryServiceImpl.giveBooksUsingQueue(Mathematics));
+//
+//        libraryServiceImpl.addToPriorityList(Efe,English);
 //        libraryServiceImpl.addToPriorityList(Mary,Mathematics);
 //        libraryServiceImpl.addToPriorityList(Okeke,Mathematics);
-//        libraryServiceImpl.addToPriorityList(Matthew,Mathematics);
+//       libraryServiceImpl.addToPriorityList(Matthew,Mathematics);
 //
 //        System.out.println(libraryServiceImpl.getPriorityQueueList());
 //

@@ -32,11 +32,10 @@ public class LibraryServiceImpl {
     public String addToBookList(Book book, int number){
         if(bookList.containsKey(book)){
             bookList.put(book, bookList.get(book) + number);
-            return book.getName() + " Book has been added";
         }else{
             bookList.put(book, number);
-                 return book.getName() + " Book has been added";
         }
+        return book.getName() + " Book has been added";
     }
 
     public String addlibraryUsers(User user, Type type) {
@@ -50,7 +49,7 @@ public class LibraryServiceImpl {
     }
 
     public String addToQueueList(User user, Book book) {
-        if(usersList.containsKey(user)) {
+        if(usersList.containsKey(user) && bookList.containsKey(book)) {
             queueList.add(user);
             return user.getName() + " has been added to the queue list";
         } else {
@@ -71,17 +70,19 @@ public class LibraryServiceImpl {
 
     public String addToPriorityList(User user, Book book) {
 
-        if(usersList.containsKey(user)){
+        if(usersList.containsKey(user) && bookList.containsKey(book)){
             priorityQueueList.add(user);
             return user.getName() + " has been added to the priority list";
         } else return " There is no book request for "+ user.getName();
     }
 
     public String giveBooksUsingPriorityQueue(Book book) {
-        User user = priorityQueueList.peek();
+
         if (bookList.containsKey(book) && bookList.get(book) > 0) {
             bookList.put(book, bookList.get(book) - 1);
             priorityQueueList.peek();
+
+           // System.out.println("Code got here too");
 
             return  book.getName() + " Book has been given to " + priorityQueueList.poll().getName();
         } else {

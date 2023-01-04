@@ -56,12 +56,12 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(User user) {
-        if(this.getId() == user.getId()){
-            return 0;
+        if(this.getId() > user.getId()){
+            return 1;
         } else if(this.getId() < user.getId()){
             return -1;
         }else{
-            return 1;
+            return 0;
         }
     }
 }
